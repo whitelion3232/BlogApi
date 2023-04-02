@@ -12,9 +12,11 @@ namespace WebApplication5.Models
         public DateTime DatePosted { get; set; }
 
         public int ArticleId { get; set; }
-        public virtual Article Article { get; set; }
+         public Article Article { get; set; } // Navigation property
 
-        public string AuthorId { get; set; }
-        public virtual User Author { get; set; }
+        public int AuthorId { get; set; }
+        public User Author { get; set; } // Navigation property
+
+        // Other properties...
     }
 }

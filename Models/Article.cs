@@ -8,9 +8,10 @@
         public DateTime DateCreated { get; set; }
         public DateTime? DateModified { get; set; }
 
-        public string AuthorId { get; set; }
-        public virtual User Author { get; set; }
+        public int AuthorId { get; set; }
+         public User Author { get; set; } // Navigation property
 
-        public virtual ICollection<Comment> Comments { get; set; }
+        // Other properties...
     }
+
 }

@@ -1,11 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore.SqlServer;
-
-
-
-namespace WebApplication5.Context
+﻿namespace WebApplication5.Context
 {
     public class DataDbInitialize
     {

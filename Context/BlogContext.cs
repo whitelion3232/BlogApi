@@ -14,5 +14,18 @@ namespace WebApplication5.Context
         public DbSet<Article> Articles { get; set; }
         public DbSet<Comment> Comments { get; set; }
 
-    }
+        public DbSet<User> User { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.Author)
+                .WithMany(u => u.Comments)
+                .HasForeignKey(c => c.AuthorId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+
+        }
+    
+}
 }

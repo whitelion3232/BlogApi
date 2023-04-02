@@ -22,7 +22,7 @@ internal class Program
 
         var app = builder.Build();
 
-        DataDbInitialize.Initialize(app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
+       DataDbInitialize.Initialize(app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
 
         // Configure the HTTP request pipeline.
 
